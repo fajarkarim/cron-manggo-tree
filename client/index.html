@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <title>My Mangoo tree</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="text-center">{{ msg }}</h1>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-4">
+            <div class="card mt-3 mb-3">
+              <div class="justify-content-center row">
+                <img class="" src="http://clipart-library.com/images/8cA6BopMi.png" alt="mangoo-tree" width="300">
+              </div>
+              <div class="card-block">
+                <h2 class="card-title">it's manggo</h2>
+                <p class="card-text">Grow Every 2 hours</p>
+                <p class="card-text">harvested Every 5 hours</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li v-for="m in manggoes" class="list-group-item">{{ m['.key'] }} : {{ m['.value'] }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+    <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+
+    <script type="text/javascript">
+
+      var config = {
+        apiKey: "AIzaSyCcfYVFV31_UnKJfBL24uawHGKz_Z26sFE",
+        authDomain: "awesome-presentation.firebaseapp.com",
+        databaseURL: "https://awesome-presentation.firebaseio.com",
+        projectId: "awesome-presentation",
+        storageBucket: "awesome-presentation.appspot.com",
+        messagingSenderId: "1021392727967"
+      };
+      firebase.initializeApp(config);
+      var db = firebase.database()
+
+      var app = new Vue({
+        el: '#app',
+        data: {
+          msg: 'My Manggo tree'
+        },
+        firebase: function () {
+          return {
+            manggoes: db.ref('manggo-tree')
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
