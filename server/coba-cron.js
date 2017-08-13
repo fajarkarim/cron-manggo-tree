@@ -14,7 +14,7 @@ firebase.initializeApp(config);
 
 var database = firebase.database()
 
-var currentUmur = 0
+var currentAge = 0
 var currentHeight = 0
 var currentFruits = 0
 var harvested = 0
