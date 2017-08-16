@@ -1,6 +1,7 @@
-# express-gen-fajar
-Extraordinary express generator, created by fajar
+# CRON Script
+simple cron job with firebase
 
 ## How to run
-in development mode: ```npm run dev```
-in production: ```npm start```
+```
+npm start
+```

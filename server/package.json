@@ -1,24 +1,20 @@
 {
-  "name": "express-gen-fajar",
-  "version": "0.0.0",
-  "private": true,
+  "name": "cron-job",
+  "version": "1.0.0",
+  "description": "simple cron job with firebase",
+  "main": "cron-script.js",
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node cron-script.js"
   },
+  "keywords": [
+    "cron",
+    "job"
+  ],
+  "author": "fajar",
+  "license": "MIT",
   "dependencies": {
-    "bcrypt": "^1.0.2",
-    "body-parser": "~1.17.1",
-    "compression": "^1.7.0",
-    "cookie-parser": "~1.4.3",
-    "cors": "^2.8.4",
-    "debug": "~2.6.3",
-    "dotenv": "^4.0.0",
-    "express": "~4.15.2",
     "firebase": "^4.2.0",
-    "jsonwebtoken": "^7.4.2",
-    "morgan": "~1.8.1",
-    "node-cron": "^1.2.1",
-    "nodemon": "^1.11.0"
+    "node-cron": "^1.2.1"
   }
 }

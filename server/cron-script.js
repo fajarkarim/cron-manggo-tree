@@ -21,7 +21,7 @@ var harvested = 0
 
 var grow = () => {
   database.ref('manggo-tree').set({
-    age: currentUmur + 1,
+    age: currentAge + 1,
     height: currentHeight + Math.round((Math.random() * 4) * 100) / 100,
     fruits: currentFruits + Math.floor(Math.random() * 12),
     harvested: harvested
